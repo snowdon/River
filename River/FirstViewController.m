@@ -14,7 +14,9 @@
 
 - (void)viewDidLoad
 {
-    NSArray *array = [[NSArray alloc] initWithObjects:@"日本", @"美国", @"德国", @"意大利", nil];
+    NSArray *array = [[NSArray alloc] initWithObjects:@"日本", @"美国", @"德国", @"意大利",
+                      @"英国",@"日本", @"美国", @"德国",@"日本", @"美国", @"德国",
+                      nil];
     self.listData = array;
     [array release];
     [super viewDidLoad];

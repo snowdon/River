@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 
 
-@interface SecondViewController : UIViewController {
-    
+@interface SecondViewController : UIViewController
+    <UITableViewDelegate, UITableViewDataSource>
+{
+    NSArray *listArt;
 }
 
+@property (nonatomic, retain) NSArray *listArt;
 @end

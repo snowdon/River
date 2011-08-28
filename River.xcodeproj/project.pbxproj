@@ -27,6 +27,15 @@
 		1541A5BF140A3F2D002B745A /* FourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5BD140A3F2D002B745A /* FourthViewController.xib */; };
 		1541A5C3140A3F4A002B745A /* FifthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541A5C1140A3F4A002B745A /* FifthViewController.m */; };
 		1541A5C4140A3F4A002B745A /* FifthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5C2140A3F4A002B745A /* FifthViewController.xib */; };
+		1541A5DE140A80A5002B745A /* avator1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5DD140A80A5002B745A /* avator1.png */; };
+		1541A5E0140A856A002B745A /* avator2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5DF140A856A002B745A /* avator2.png */; };
+		1541A5E2140A8AC8002B745A /* avator3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E1140A8AC7002B745A /* avator3.png */; };
+		1541A5E4140A8ACE002B745A /* avator4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E3140A8ACE002B745A /* avator4.png */; };
+		1541A5EA140A8ADB002B745A /* avator5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E5140A8ADB002B745A /* avator5.png */; };
+		1541A5EB140A8ADB002B745A /* avator6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E6140A8ADB002B745A /* avator6.png */; };
+		1541A5EC140A8ADB002B745A /* avator7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E7140A8ADB002B745A /* avator7.png */; };
+		1541A5ED140A8ADB002B745A /* avator8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E8140A8ADB002B745A /* avator8.png */; };
+		1541A5EE140A8ADB002B745A /* avator9.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E9140A8ADB002B745A /* avator9.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +68,15 @@
 		1541A5C0140A3F4A002B745A /* FifthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FifthViewController.h; sourceTree = "<group>"; };
 		1541A5C1140A3F4A002B745A /* FifthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FifthViewController.m; sourceTree = "<group>"; };
 		1541A5C2140A3F4A002B745A /* FifthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FifthViewController.xib; sourceTree = "<group>"; };
+		1541A5DD140A80A5002B745A /* avator1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator1.png; sourceTree = "<group>"; };
+		1541A5DF140A856A002B745A /* avator2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator2.png; sourceTree = "<group>"; };
+		1541A5E1140A8AC7002B745A /* avator3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator3.png; sourceTree = "<group>"; };
+		1541A5E3140A8ACE002B745A /* avator4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator4.png; sourceTree = "<group>"; };
+		1541A5E5140A8ADB002B745A /* avator5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator5.png; sourceTree = "<group>"; };
+		1541A5E6140A8ADB002B745A /* avator6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator6.png; sourceTree = "<group>"; };
+		1541A5E7140A8ADB002B745A /* avator7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator7.png; sourceTree = "<group>"; };
+		1541A5E8140A8ADB002B745A /* avator8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator8.png; sourceTree = "<group>"; };
+		1541A5E9140A8ADB002B745A /* avator9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator9.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +149,15 @@
 		1541A591140A3E2A002B745A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1541A5DD140A80A5002B745A /* avator1.png */,
+				1541A5DF140A856A002B745A /* avator2.png */,
+				1541A5E1140A8AC7002B745A /* avator3.png */,
+				1541A5E3140A8ACE002B745A /* avator4.png */,
+				1541A5E5140A8ADB002B745A /* avator5.png */,
+				1541A5E6140A8ADB002B745A /* avator6.png */,
+				1541A5E7140A8ADB002B745A /* avator7.png */,
+				1541A5E8140A8ADB002B745A /* avator8.png */,
+				1541A5E9140A8ADB002B745A /* avator9.png */,
 				1541A5B2140A3E4E002B745A /* Icon@2x.png */,
 				1541A5B0140A3E49002B745A /* Icon.png */,
 				1541A5B4140A3E56002B745A /* star.png */,
@@ -199,6 +226,15 @@
 				1541A5BA140A3F0D002B745A /* ThirdViewController.xib in Resources */,
 				1541A5BF140A3F2D002B745A /* FourthViewController.xib in Resources */,
 				1541A5C4140A3F4A002B745A /* FifthViewController.xib in Resources */,
+				1541A5DE140A80A5002B745A /* avator1.png in Resources */,
+				1541A5E0140A856A002B745A /* avator2.png in Resources */,
+				1541A5E2140A8AC8002B745A /* avator3.png in Resources */,
+				1541A5E4140A8ACE002B745A /* avator4.png in Resources */,
+				1541A5EA140A8ADB002B745A /* avator5.png in Resources */,
+				1541A5EB140A8ADB002B745A /* avator6.png in Resources */,
+				1541A5EC140A8ADB002B745A /* avator7.png in Resources */,
+				1541A5ED140A8ADB002B745A /* avator8.png in Resources */,
+				1541A5EE140A8ADB002B745A /* avator9.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

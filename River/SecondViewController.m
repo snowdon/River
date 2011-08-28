@@ -10,6 +10,17 @@
 
 
 @implementation SecondViewController
+@synthesize listArt;
+
+- (void)viewDidLoad
+{
+    NSArray *array = [[NSArray alloc] initWithObjects:@"A", @"A", @"B", @"C",
+                      @"英国",@"日本", @"美国", @"德国",@"日本", @"美国", @"德国",
+                      nil];
+    self.listArt = array;
+    [array release];
+    [super viewDidLoad];
+}
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -48,5 +59,88 @@
 {
     [super dealloc];
 }
+
+#pragma mark -
+#pragma mark Table View Data Source Methods
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section{
+    return [self.listArt count];
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *SimpleTableidentifier = @"SimpleTableIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
+                             SimpleTableidentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc]
+                 initWithStyle:UITableViewCellStyleDefault
+                 reuseIdentifier:SimpleTableidentifier] autorelease];
+        
+    }
+    
+ //   UIImage *image = [UIImage imageNamed:@"avator1.png"];
+ //   cell.imageView.image = image;
+    
+    if(indexPath.row == 0)
+    {
+        cell.image = [UIImage imageNamed:@"avator1.png"];
+    }
+    
+    else if (indexPath.row == 1)
+    {
+        cell.image = [UIImage imageNamed:@"avator2.png"];
+    }
+    
+    else if(indexPath.row == 2)
+    {
+        cell.image = [UIImage imageNamed:@"avator3.png"];
+    }
+    
+    else if (indexPath.row == 3)
+    {
+        cell.image = [UIImage imageNamed:@"avator4.png"];
+    }
+    
+    else if(indexPath.row == 4)
+    {
+        cell.image = [UIImage imageNamed:@"avator5.png"];
+    }
+    
+    else if (indexPath.row == 5)
+    {
+        cell.image = [UIImage imageNamed:@"avator6.png"];
+    }
+    
+    
+    else if(indexPath.row == 6)
+    {
+        cell.image = [UIImage imageNamed:@"avator7.png"];
+    }
+    
+    else if (indexPath.row == 7)
+    {
+        cell.image = [UIImage imageNamed:@"avator8.png"];
+    }
+    
+    else if(indexPath.row == 8)
+    {
+        cell.image = [UIImage imageNamed:@"avator9.png"];
+    }
+    
+    else if (indexPath.row == 5)
+    {
+        cell.image = [UIImage imageNamed:@"avator6.png"];
+    }
+    
+    
+    
+    NSUInteger row = [indexPath row];
+    cell.textLabel.text = [listArt objectAtIndex:row];
+    return cell;
+    
+}
+
 
 @end
