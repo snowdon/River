@@ -14,8 +14,8 @@
 
 - (void)viewDidLoad
 {
-    NSArray *array = [[NSArray alloc] initWithObjects:@"A", @"A", @"B", @"C",
-                      @"英国",@"日本", @"美国", @"德国",@"日本", @"美国", @"德国",
+    NSArray *array = [[NSArray alloc] initWithObjects:@"李", @"王", @"张", @"谢",
+                      @"英",@"", @"国", @"司",@"济", @"美", @"德",
                       nil];
     self.listArt = array;
     [array release];
