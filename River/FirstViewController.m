@@ -10,6 +10,15 @@
 
 
 @implementation FirstViewController
+@synthesize listData;
+
+- (void)viewDidLoad
+{
+    NSArray *array = [[NSArray alloc] initWithObjects:@"日本", @"美国", @"德国", @"意大利", nil];
+    self.listData = array;
+    [array release];
+    [super viewDidLoad];
+}
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -37,6 +46,7 @@
 
 - (void)viewDidUnload
 {
+    self.listData = nil;
     [super viewDidUnload];
 
     // Release any retained subviews of the main view.
@@ -46,7 +56,35 @@
 
 - (void)dealloc
 {
+    [listData release];
     [super dealloc];
 }
+
+#pragma mark -
+#pragma mark Table View Data Source Methods
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section{
+    return [self.listData count];
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *SimpleTableidentifier = @"SimpleTableIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
+                       SimpleTableidentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc]
+                 initWithStyle:UITableViewCellStyleDefault
+                 reuseIdentifier:SimpleTableidentifier] autorelease];
+        
+    }
+    
+    NSUInteger row = [indexPath row];
+    cell.textLabel.text = [listData objectAtIndex:row];
+    return cell;
+    
+}
+
 
 @end
