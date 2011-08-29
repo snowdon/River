@@ -148,4 +148,28 @@
 }
 
 
+- (NSIndexPath *)tableView:(UITableView *) tableView
+  willSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return indexPath;
+}
+
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSUInteger row = [indexPath row];
+    NSString *rowValue = [listData objectAtIndex:row];
+    
+    NSString *message = [[NSString alloc] initWithFormat:@"you select %@", rowValue];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Row selected!"
+                                                    message:message
+                                                   delegate:nil 
+                                          cancelButtonTitle:@"Yes I Did"
+                                          otherButtonTitles:nil];
+    [alert show];
+    
+    [message release];
+    [alert release];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 @end
