@@ -14,7 +14,7 @@
 
 - (void)viewDidLoad
 {
-    NSArray *array = [[NSArray alloc] initWithObjects:@"日本", @"美国", @"德国", @"意大利",
+    NSArray *array = [[NSArray alloc] initWithObjects:@"日本  9:00 ", @"美国", @"德国", @"意大利",
                       @"英国",@"日本", @"美国", @"德国",@"日本", @"美国", @"德国",
                       nil];
     self.listData = array;
@@ -77,13 +77,72 @@
                        SimpleTableidentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc]
-                 initWithStyle:UITableViewCellStyleDefault
+                 initWithStyle:UITableViewCellStyleValue1
                  reuseIdentifier:SimpleTableidentifier] autorelease];
         
     }
     
+    if(indexPath.row == 0)
+    {
+        cell.image = [UIImage imageNamed:@"avator1.png"];
+    }
+    
+    else if (indexPath.row == 1)
+    {
+        cell.image = [UIImage imageNamed:@"avator2.png"];
+    }
+    
+    else if(indexPath.row == 2)
+    {
+        cell.image = [UIImage imageNamed:@"avator3.png"];
+    }
+    
+    else if (indexPath.row == 3)
+    {
+        cell.image = [UIImage imageNamed:@"avator4.png"];
+    }
+    
+    else if(indexPath.row == 4)
+    {
+        cell.image = [UIImage imageNamed:@"avator5.png"];
+    }
+    
+    else if (indexPath.row == 5)
+    {
+        cell.image = [UIImage imageNamed:@"avator6.png"];
+    }
+    
+    
+    else if(indexPath.row == 6)
+    {
+        cell.image = [UIImage imageNamed:@"avator7.png"];
+    }
+    
+    else if (indexPath.row == 7)
+    {
+        cell.image = [UIImage imageNamed:@"avator8.png"];
+    }
+    
+    else if(indexPath.row == 8)
+    {
+        cell.image = [UIImage imageNamed:@"avator9.png"];
+    }
+    
+    else if (indexPath.row == 5)
+    {
+        cell.image = [UIImage imageNamed:@"avator6.png"];
+    }
+    
+    
     NSUInteger row = [indexPath row];
     cell.textLabel.text = [listData objectAtIndex:row];
+    
+    if (row < 7)
+        cell.detailTextLabel.text = @"Chun";
+    
+    else
+        cell.detailTextLabel.text = @"Dong";
+    
     return cell;
     
 }

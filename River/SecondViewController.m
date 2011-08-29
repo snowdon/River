@@ -14,7 +14,7 @@
 
 - (void)viewDidLoad
 {
-    NSArray *array = [[NSArray alloc] initWithObjects:@"李", @"王", @"张", @"谢",
+    NSArray *array = [[NSArray alloc] initWithObjects:@"李     12:00 ", @"王", @"张", @"谢",
                       @"英",@"", @"国", @"司",@"济", @"美", @"德",
                       nil];
     self.listArt = array;
@@ -75,7 +75,7 @@
                              SimpleTableidentifier];
     if (cell == nil) {
         cell = [[[UITableViewCell alloc]
-                 initWithStyle:UITableViewCellStyleDefault
+                 initWithStyle:UITableViewCellStyleSubtitle
                  reuseIdentifier:SimpleTableidentifier] autorelease];
         
     }
@@ -138,6 +138,13 @@
     
     NSUInteger row = [indexPath row];
     cell.textLabel.text = [listArt objectAtIndex:row];
+    
+    if (row < 7)
+        cell.detailTextLabel.text = @"Chun";
+    
+    else
+        cell.detailTextLabel.text = @"Dong";
+    
     return cell;
     
 }
