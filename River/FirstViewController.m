@@ -11,14 +11,28 @@
 
 @implementation FirstViewController
 @synthesize listData;
+@synthesize names;
+@synthesize keys;
+
+
 
 - (void)viewDidLoad
 {
-    NSArray *array = [[NSArray alloc] initWithObjects:@"日本  9:00 ", @"美国", @"德国", @"意大利",
-                      @"英国",@"日本", @"美国", @"德国",@"日本", @"美国", @"德国",
-                      nil];
-    self.listData = array;
-    [array release];
+ //   NSArray *array = [[NSArray alloc] initWithObjects:@"日本  9:00 ", @"美国", @"德国", @"意大利",
+ //                     @"英国",@"日本", @"美国", @"德国",@"日本", @"美国", @"德国",                      nil];
+ //   self.listData = array;
+   
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"lineup"
+                                                     ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    
+    self.names = dict;
+    
+    [dict release];
+    NSArray *array = [[names allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    self.keys = array ;
+    
+    //[array release];
     [super viewDidLoad];
 }
 
@@ -53,12 +67,17 @@
 
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    
+    self.names = nil;
+    self.keys = nil;
 }
 
 
 - (void)dealloc
 {
     [listData release];
+    [names release];
+    [keys release];
     [super dealloc];
 }
 

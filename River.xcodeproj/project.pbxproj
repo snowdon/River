@@ -36,6 +36,7 @@
 		1541A5EC140A8ADB002B745A /* avator7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E7140A8ADB002B745A /* avator7.png */; };
 		1541A5ED140A8ADB002B745A /* avator8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E8140A8ADB002B745A /* avator8.png */; };
 		1541A5EE140A8ADB002B745A /* avator9.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E9140A8ADB002B745A /* avator9.png */; };
+		15D589B4140B97C10027D4A0 /* lineup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15D589B3140B97C10027D4A0 /* lineup.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,7 @@
 		1541A5E7140A8ADB002B745A /* avator7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator7.png; sourceTree = "<group>"; };
 		1541A5E8140A8ADB002B745A /* avator8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator8.png; sourceTree = "<group>"; };
 		1541A5E9140A8ADB002B745A /* avator9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator9.png; sourceTree = "<group>"; };
+		15D589B3140B97C10027D4A0 /* lineup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lineup.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				1541A593140A3E2A002B745A /* InfoPlist.strings */,
 				1541A596140A3E2A002B745A /* River-Prefix.pch */,
 				1541A597140A3E2A002B745A /* main.m */,
+				15D589B3140B97C10027D4A0 /* lineup.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				1541A5EC140A8ADB002B745A /* avator7.png in Resources */,
 				1541A5ED140A8ADB002B745A /* avator8.png in Resources */,
 				1541A5EE140A8ADB002B745A /* avator9.png in Resources */,
+				15D589B4140B97C10027D4A0 /* lineup.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +376,7 @@
 				1541A5AF140A3E2A002B745A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
