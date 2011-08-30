@@ -206,6 +206,52 @@
     
     cell.textLabel.text = [nameSection objectAtIndex:row];
     
+    
+    if(indexPath.row == 0)
+    {
+        cell.image = [UIImage imageNamed:@"avator1.png"];
+    }
+    
+    else if (indexPath.row == 1)
+    {
+        cell.image = [UIImage imageNamed:@"avator2.png"];
+    }
+    
+    else if(indexPath.row == 2)
+    {
+        cell.image = [UIImage imageNamed:@"avator3.png"];
+    }
+    
+    else if (indexPath.row == 3)
+    {
+        cell.image = [UIImage imageNamed:@"avator4.png"];
+    }
+    
+    else if(indexPath.row == 4)
+    {
+        cell.image = [UIImage imageNamed:@"avator5.png"];
+    }
+    
+    else if (indexPath.row == 5)
+    {
+        cell.image = [UIImage imageNamed:@"avator6.png"];
+    }
+    
+    
+    else if(indexPath.row == 6)
+    {
+        cell.image = [UIImage imageNamed:@"avator7.png"];
+    }
+    
+    else if (indexPath.row == 7)
+    {
+        cell.image = [UIImage imageNamed:@"avator8.png"];
+    }
+    
+    else if(indexPath.row == 8)
+    {
+        cell.image = [UIImage imageNamed:@"avator9.png"];
+    }
         
     return cell;
     

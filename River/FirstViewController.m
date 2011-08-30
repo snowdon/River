@@ -29,12 +29,14 @@
     self.names = dict;
     
     [dict release];
-    NSArray *array = [[names allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    //NSArray *array = [[names allKeys] sortedArrayUsingSelector:@selector(compare:)];
+    NSArray *array = [names allKeys];
     self.keys = array ;
     
     //[array release];
     [super viewDidLoad];
 }
+
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -81,6 +83,198 @@
     [super dealloc];
 }
 
+
+#pragma mark -
+#pragma mark Table View Data Source Methods
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView 
+{
+    return [keys count];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section{
+    NSString *key = [keys objectAtIndex:section];
+    NSArray *nameSection = [names objectForKey:key];
+    return [nameSection count];
+    
+}
+
+
+/*
+ 
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+ static NSString *SimpleTableidentifier = @"SimpleTableIdentifier";
+ 
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
+ SimpleTableidentifier];
+ if (cell == nil) {
+ cell = [[[UITableViewCell alloc]
+ initWithStyle:UITableViewCellStyleSubtitle
+ reuseIdentifier:SimpleTableidentifier] autorelease];
+ 
+ }
+ 
+ //   UIImage *image = [UIImage imageNamed:@"avator1.png"];
+ //   cell.imageView.image = image;
+ 
+ if(indexPath.row == 0)
+ {
+ cell.image = [UIImage imageNamed:@"avator1.png"];
+ }
+ 
+ else if (indexPath.row == 1)
+ {
+ cell.image = [UIImage imageNamed:@"avator2.png"];
+ }
+ 
+ else if(indexPath.row == 2)
+ {
+ cell.image = [UIImage imageNamed:@"avator3.png"];
+ }
+ 
+ else if (indexPath.row == 3)
+ {
+ cell.image = [UIImage imageNamed:@"avator4.png"];
+ }
+ 
+ else if(indexPath.row == 4)
+ {
+ cell.image = [UIImage imageNamed:@"avator5.png"];
+ }
+ 
+ else if (indexPath.row == 5)
+ {
+ cell.image = [UIImage imageNamed:@"avator6.png"];
+ }
+ 
+ 
+ else if(indexPath.row == 6)
+ {
+ cell.image = [UIImage imageNamed:@"avator7.png"];
+ }
+ 
+ else if (indexPath.row == 7)
+ {
+ cell.image = [UIImage imageNamed:@"avator8.png"];
+ }
+ 
+ else if(indexPath.row == 8)
+ {
+ cell.image = [UIImage imageNamed:@"avator9.png"];
+ }
+ 
+ else if (indexPath.row == 5)
+ {
+ cell.image = [UIImage imageNamed:@"avator6.png"];
+ }
+ 
+ 
+ 
+ NSUInteger row = [indexPath row];
+ cell.textLabel.text = [listArt objectAtIndex:row];
+ 
+ if (row < 7)
+ cell.detailTextLabel.text = @"Chun";
+ 
+ else
+ cell.detailTextLabel.text = @"Dong";
+ 
+ return cell;
+ 
+ }
+ 
+ */
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger section = [indexPath section];
+    NSUInteger row = [indexPath row];
+    
+    NSString *key = [keys objectAtIndex:section];
+    NSArray *nameSection = [names objectForKey:key];
+    
+    static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
+                             SectionsTableIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc]
+                 initWithStyle:UITableViewCellStyleDefault
+                 reuseIdentifier:SectionsTableIdentifier] autorelease];
+        
+    }
+    
+    
+    cell.textLabel.text = [nameSection objectAtIndex:row];
+    
+    
+    if(indexPath.row == 0)
+    {
+        cell.image = [UIImage imageNamed:@"avator1.png"];
+    }
+    
+    else if (indexPath.row == 1)
+    {
+        cell.image = [UIImage imageNamed:@"avator2.png"];
+    }
+    
+    else if(indexPath.row == 2)
+    {
+        cell.image = [UIImage imageNamed:@"avator3.png"];
+    }
+    
+    else if (indexPath.row == 3)
+    {
+        cell.image = [UIImage imageNamed:@"avator4.png"];
+    }
+    
+    else if(indexPath.row == 4)
+    {
+        cell.image = [UIImage imageNamed:@"avator5.png"];
+    }
+    
+    else if (indexPath.row == 5)
+    {
+        cell.image = [UIImage imageNamed:@"avator6.png"];
+    }
+    
+    
+    else if(indexPath.row == 6)
+    {
+        cell.image = [UIImage imageNamed:@"avator7.png"];
+    }
+    
+    else if (indexPath.row == 7)
+    {
+        cell.image = [UIImage imageNamed:@"avator8.png"];
+    }
+    
+    else if(indexPath.row == 8)
+    {
+        cell.image = [UIImage imageNamed:@"avator9.png"];
+    }
+    
+    return cell;
+    
+}
+
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *key = [keys objectAtIndex:section];
+    return key;
+}
+
+/*
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return keys;
+}
+*/
+
+
+
+/*
 #pragma mark -
 #pragma mark Table View Data Source Methods
 - (NSInteger)tableView:(UITableView *)tableView
@@ -191,4 +385,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [alert release];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+*/
+
 @end
