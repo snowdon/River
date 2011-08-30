@@ -13,7 +13,14 @@
     <UITableViewDelegate, UITableViewDataSource>
 {
     NSArray *listArt;
+    
+    NSDictionary *name;
+    NSArray *keys;
 }
 
 @property (nonatomic, retain) NSArray *listArt;
+
+@property (nonatomic, retain) NSDictionary *names;
+@property (nonatomic, retain) NSArray *keys;
+
 @end
