@@ -16,8 +16,8 @@
 		1541A59E140A3E2A002B745A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1541A59C140A3E2A002B745A /* MainWindow.xib */; };
 		1541A5A1140A3E2A002B745A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541A5A0140A3E2A002B745A /* FirstViewController.m */; };
 		1541A5A4140A3E2A002B745A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1541A5A3140A3E2A002B745A /* SecondViewController.m */; };
-		1541A5A7140A3E2A002B745A /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5A5140A3E2A002B745A /* FirstView.xib */; };
-		1541A5AA140A3E2A002B745A /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5A8140A3E2A002B745A /* SecondView.xib */; };
+		1541A5A7140A3E2A002B745A /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5A5140A3E2A002B745A /* FirstViewController.xib */; };
+		1541A5AA140A3E2A002B745A /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5A8140A3E2A002B745A /* SecondViewController.xib */; };
 		1541A5B1140A3E49002B745A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5B0140A3E49002B745A /* Icon.png */; };
 		1541A5B3140A3E4E002B745A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5B2140A3E4E002B745A /* Icon@2x.png */; };
 		1541A5B5140A3E56002B745A /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5B4140A3E56002B745A /* star.png */; };
@@ -36,6 +36,9 @@
 		1541A5EC140A8ADB002B745A /* avator7.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E7140A8ADB002B745A /* avator7.png */; };
 		1541A5ED140A8ADB002B745A /* avator8.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E8140A8ADB002B745A /* avator8.png */; };
 		1541A5EE140A8ADB002B745A /* avator9.png in Resources */ = {isa = PBXBuildFile; fileRef = 1541A5E9140A8ADB002B745A /* avator9.png */; };
+		15DCF1031410C58B00C0651A /* ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DCF1011410C58B00C0651A /* ArtistDetailViewController.m */; };
+		15DCF1041410C58B00C0651A /* ArtistDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DCF1021410C58B00C0651A /* ArtistDetailViewController.xib */; };
+		15DCF1071410CA3600C0651A /* arts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15DCF1061410CA3600C0651A /* arts.plist */; };
 		15F09204140CC96300C3075A /* artistlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15F09203140CC96300C3075A /* artistlist.plist */; };
 		15F09209140CD65B00C3075A /* lineup.plist in Resources */ = {isa = PBXBuildFile; fileRef = 15F09208140CD65A00C3075A /* lineup.plist */; };
 /* End PBXBuildFile section */
@@ -56,8 +59,8 @@
 		1541A5A0140A3E2A002B745A /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		1541A5A2140A3E2A002B745A /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		1541A5A3140A3E2A002B745A /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		1541A5A6140A3E2A002B745A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
-		1541A5A9140A3E2A002B745A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+		1541A5A6140A3E2A002B745A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController.xib; sourceTree = "<group>"; };
+		1541A5A9140A3E2A002B745A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
 		1541A5B0140A3E49002B745A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		1541A5B2140A3E4E002B745A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		1541A5B4140A3E56002B745A /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
@@ -79,6 +82,10 @@
 		1541A5E7140A8ADB002B745A /* avator7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator7.png; sourceTree = "<group>"; };
 		1541A5E8140A8ADB002B745A /* avator8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator8.png; sourceTree = "<group>"; };
 		1541A5E9140A8ADB002B745A /* avator9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avator9.png; sourceTree = "<group>"; };
+		15DCF1001410C58B00C0651A /* ArtistDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtistDetailViewController.h; sourceTree = "<group>"; };
+		15DCF1011410C58B00C0651A /* ArtistDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtistDetailViewController.m; sourceTree = "<group>"; };
+		15DCF1021410C58B00C0651A /* ArtistDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtistDetailViewController.xib; sourceTree = "<group>"; };
+		15DCF1061410CA3600C0651A /* arts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = arts.plist; sourceTree = "<group>"; };
 		15F09203140CC96300C3075A /* artistlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = artistlist.plist; sourceTree = "<group>"; };
 		15F09208140CD65A00C3075A /* lineup.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lineup.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,14 +141,17 @@
 				1541A5A0140A3E2A002B745A /* FirstViewController.m */,
 				1541A5A2140A3E2A002B745A /* SecondViewController.h */,
 				1541A5A3140A3E2A002B745A /* SecondViewController.m */,
+				15DCF1001410C58B00C0651A /* ArtistDetailViewController.h */,
+				15DCF1011410C58B00C0651A /* ArtistDetailViewController.m */,
+				15DCF1021410C58B00C0651A /* ArtistDetailViewController.xib */,
 				1541A5B6140A3F0D002B745A /* ThirdViewController.h */,
 				1541A5B7140A3F0D002B745A /* ThirdViewController.m */,
 				1541A5BB140A3F2D002B745A /* FourthViewController.h */,
 				1541A5BC140A3F2D002B745A /* FourthViewController.m */,
 				1541A5C0140A3F4A002B745A /* FifthViewController.h */,
 				1541A5C1140A3F4A002B745A /* FifthViewController.m */,
-				1541A5A5140A3E2A002B745A /* FirstView.xib */,
-				1541A5A8140A3E2A002B745A /* SecondView.xib */,
+				1541A5A5140A3E2A002B745A /* FirstViewController.xib */,
+				1541A5A8140A3E2A002B745A /* SecondViewController.xib */,
 				1541A5B8140A3F0D002B745A /* ThirdViewController.xib */,
 				1541A5BD140A3F2D002B745A /* FourthViewController.xib */,
 				1541A5C2140A3F4A002B745A /* FifthViewController.xib */,
@@ -163,6 +173,7 @@
 				1541A593140A3E2A002B745A /* InfoPlist.strings */,
 				1541A596140A3E2A002B745A /* River-Prefix.pch */,
 				1541A597140A3E2A002B745A /* main.m */,
+				15DCF1061410CA3600C0651A /* arts.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -232,8 +243,8 @@
 			files = (
 				1541A595140A3E2A002B745A /* InfoPlist.strings in Resources */,
 				1541A59E140A3E2A002B745A /* MainWindow.xib in Resources */,
-				1541A5A7140A3E2A002B745A /* FirstView.xib in Resources */,
-				1541A5AA140A3E2A002B745A /* SecondView.xib in Resources */,
+				1541A5A7140A3E2A002B745A /* FirstViewController.xib in Resources */,
+				1541A5AA140A3E2A002B745A /* SecondViewController.xib in Resources */,
 				1541A5B1140A3E49002B745A /* Icon.png in Resources */,
 				1541A5B3140A3E4E002B745A /* Icon@2x.png in Resources */,
 				1541A5B5140A3E56002B745A /* star.png in Resources */,
@@ -251,6 +262,8 @@
 				1541A5EE140A8ADB002B745A /* avator9.png in Resources */,
 				15F09204140CC96300C3075A /* artistlist.plist in Resources */,
 				15F09209140CD65B00C3075A /* lineup.plist in Resources */,
+				15DCF1041410C58B00C0651A /* ArtistDetailViewController.xib in Resources */,
+				15DCF1071410CA3600C0651A /* arts.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +281,7 @@
 				1541A5B9140A3F0D002B745A /* ThirdViewController.m in Sources */,
 				1541A5BE140A3F2D002B745A /* FourthViewController.m in Sources */,
 				1541A5C3140A3F4A002B745A /* FifthViewController.m in Sources */,
+				15DCF1031410C58B00C0651A /* ArtistDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,20 +304,20 @@
 			name = MainWindow.xib;
 			sourceTree = "<group>";
 		};
-		1541A5A5140A3E2A002B745A /* FirstView.xib */ = {
+		1541A5A5140A3E2A002B745A /* FirstViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1541A5A6140A3E2A002B745A /* en */,
 			);
-			name = FirstView.xib;
+			name = FirstViewController.xib;
 			sourceTree = "<group>";
 		};
-		1541A5A8140A3E2A002B745A /* SecondView.xib */ = {
+		1541A5A8140A3E2A002B745A /* SecondViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				1541A5A9140A3E2A002B745A /* en */,
 			);
-			name = SecondView.xib;
+			name = SecondViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

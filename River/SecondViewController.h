@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ArtistDetailViewController.h"
+@class ArtistDetailViewController;
 
 @interface SecondViewController : UIViewController
     <UITableViewDelegate, UITableViewDataSource>
@@ -16,11 +17,15 @@
     
     NSDictionary *name;
     NSArray *keys;
+    
+    ArtistDetailViewController *advController;
 }
 
 @property (nonatomic, retain) NSArray *listArt;
 
 @property (nonatomic, retain) NSDictionary *names;
 @property (nonatomic, retain) NSArray *keys;
+
+@property (nonatomic, retain) ArtistDetailViewController *advController;
 
 @end

@@ -10,16 +10,37 @@
 
 
 @implementation FirstViewController
+
 @synthesize listData;
 @synthesize names;
 @synthesize keys;
 
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // Override point for customization after application launch.
+    FirstViewController *simpleTableViewController = [[FirstViewController alloc] init];
+    
+    
+    UINavigationController *navController = [[UINavigationController alloc]
+                                             initWithRootViewController:simpleTableViewController];
+    
+    
+    [simpleTableViewController release];
+    
+    [[self window] setRootViewController:navController];
+    
+ //   [self.window makeKeyAndVisible];
+    return YES;
+}
 
 
 - (void)viewDidLoad
 {
  //   NSArray *array = [[NSArray alloc] initWithObjects:@"日本  9:00 ", @"美国", @"德国", @"意大利",
  //                     @"英国",@"日本", @"美国", @"德国",@"日本", @"美国", @"德国",                      nil];
+    
+    
  //   self.listData = array;
    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"lineup"
@@ -207,53 +228,6 @@
     
     cell.textLabel.text = [nameSection objectAtIndex:row];
     
-    
-    if(indexPath.row == 0)
-    {
-        cell.image = [UIImage imageNamed:@"avator1.png"];
-    }
-    
-    else if (indexPath.row == 1)
-    {
-        cell.image = [UIImage imageNamed:@"avator2.png"];
-    }
-    
-    else if(indexPath.row == 2)
-    {
-        cell.image = [UIImage imageNamed:@"avator3.png"];
-    }
-    
-    else if (indexPath.row == 3)
-    {
-        cell.image = [UIImage imageNamed:@"avator4.png"];
-    }
-    
-    else if(indexPath.row == 4)
-    {
-        cell.image = [UIImage imageNamed:@"avator5.png"];
-    }
-    
-    else if (indexPath.row == 5)
-    {
-        cell.image = [UIImage imageNamed:@"avator6.png"];
-    }
-    
-    
-    else if(indexPath.row == 6)
-    {
-        cell.image = [UIImage imageNamed:@"avator7.png"];
-    }
-    
-    else if (indexPath.row == 7)
-    {
-        cell.image = [UIImage imageNamed:@"avator8.png"];
-    }
-    
-    else if(indexPath.row == 8)
-    {
-        cell.image = [UIImage imageNamed:@"avator9.png"];
-    }
-    
     return cell;
     
 }
@@ -293,57 +267,6 @@
                  initWithStyle:UITableViewCellStyleValue1
                  reuseIdentifier:SimpleTableidentifier] autorelease];
         
-    }
-    
-    if(indexPath.row == 0)
-    {
-        cell.image = [UIImage imageNamed:@"avator1.png"];
-    }
-    
-    else if (indexPath.row == 1)
-    {
-        cell.image = [UIImage imageNamed:@"avator2.png"];
-    }
-    
-    else if(indexPath.row == 2)
-    {
-        cell.image = [UIImage imageNamed:@"avator3.png"];
-    }
-    
-    else if (indexPath.row == 3)
-    {
-        cell.image = [UIImage imageNamed:@"avator4.png"];
-    }
-    
-    else if(indexPath.row == 4)
-    {
-        cell.image = [UIImage imageNamed:@"avator5.png"];
-    }
-    
-    else if (indexPath.row == 5)
-    {
-        cell.image = [UIImage imageNamed:@"avator6.png"];
-    }
-    
-    
-    else if(indexPath.row == 6)
-    {
-        cell.image = [UIImage imageNamed:@"avator7.png"];
-    }
-    
-    else if (indexPath.row == 7)
-    {
-        cell.image = [UIImage imageNamed:@"avator8.png"];
-    }
-    
-    else if(indexPath.row == 8)
-    {
-        cell.image = [UIImage imageNamed:@"avator9.png"];
-    }
-    
-    else if (indexPath.row == 5)
-    {
-        cell.image = [UIImage imageNamed:@"avator6.png"];
     }
     
     
@@ -386,5 +309,16 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    FirstViewController *fViewController = [[[FirstViewController alloc]
+                                           init ] autorelease];
+  //  dvController.artists = [self.arts objectAtIndex:indexPath.row];
+    
+    [[self navigationController] pushViewController:fViewController 
+                                           animated:YES];
+}
+
 
 @end

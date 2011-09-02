@@ -7,13 +7,17 @@
 //
 
 #import "SecondViewController.h"
-
+#import "ArtistDetailViewController.h"
 
 @implementation SecondViewController
+@class ArtistDetailViewController;
+
 @synthesize listArt;
 
 @synthesize names;
 @synthesize keys;
+@synthesize advController;
+
 /*
 - (void)viewDidLoad
 {
@@ -27,6 +31,23 @@
 */
 
 - (void)viewDidLoad {
+    
+ //   SecondViewController *secondViewController = [[SecondViewController alloc] init];
+    
+    
+ //   UINavigationController *navController = [[UINavigationController alloc]
+//                                             initWithRootViewController:secondViewController];
+    
+    
+ //   [secondViewController release];
+    
+   // [[self window] setRootViewController:navController];
+    
+//    [self.window makeKeyAndVisible];
+    
+  //  return YES;
+    
+    
     NSString *path = [[NSBundle mainBundle]pathForResource:@"artistlist"
                                                     ofType:@"plist"];
     NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
@@ -117,57 +138,6 @@
  //   UIImage *image = [UIImage imageNamed:@"avator1.png"];
  //   cell.imageView.image = image;
     
-    if(indexPath.row == 0)
-    {
-        cell.image = [UIImage imageNamed:@"avator1.png"];
-    }
-    
-    else if (indexPath.row == 1)
-    {
-        cell.image = [UIImage imageNamed:@"avator2.png"];
-    }
-    
-    else if(indexPath.row == 2)
-    {
-        cell.image = [UIImage imageNamed:@"avator3.png"];
-    }
-    
-    else if (indexPath.row == 3)
-    {
-        cell.image = [UIImage imageNamed:@"avator4.png"];
-    }
-    
-    else if(indexPath.row == 4)
-    {
-        cell.image = [UIImage imageNamed:@"avator5.png"];
-    }
-    
-    else if (indexPath.row == 5)
-    {
-        cell.image = [UIImage imageNamed:@"avator6.png"];
-    }
-    
-    
-    else if(indexPath.row == 6)
-    {
-        cell.image = [UIImage imageNamed:@"avator7.png"];
-    }
-    
-    else if (indexPath.row == 7)
-    {
-        cell.image = [UIImage imageNamed:@"avator8.png"];
-    }
-    
-    else if(indexPath.row == 8)
-    {
-        cell.image = [UIImage imageNamed:@"avator9.png"];
-    }
-    
-    else if (indexPath.row == 5)
-    {
-        cell.image = [UIImage imageNamed:@"avator6.png"];
-    }
-    
     
     
     NSUInteger row = [indexPath row];
@@ -206,53 +176,7 @@
     
     cell.textLabel.text = [nameSection objectAtIndex:row];
     
-    
-    if(indexPath.row == 0)
-    {
-        cell.image = [UIImage imageNamed:@"avator1.png"];
-    }
-    
-    else if (indexPath.row == 1)
-    {
-        cell.image = [UIImage imageNamed:@"avator2.png"];
-    }
-    
-    else if(indexPath.row == 2)
-    {
-        cell.image = [UIImage imageNamed:@"avator3.png"];
-    }
-    
-    else if (indexPath.row == 3)
-    {
-        cell.image = [UIImage imageNamed:@"avator4.png"];
-    }
-    
-    else if(indexPath.row == 4)
-    {
-        cell.image = [UIImage imageNamed:@"avator5.png"];
-    }
-    
-    else if (indexPath.row == 5)
-    {
-        cell.image = [UIImage imageNamed:@"avator6.png"];
-    }
-    
-    
-    else if(indexPath.row == 6)
-    {
-        cell.image = [UIImage imageNamed:@"avator7.png"];
-    }
-    
-    else if (indexPath.row == 7)
-    {
-        cell.image = [UIImage imageNamed:@"avator8.png"];
-    }
-    
-    else if(indexPath.row == 8)
-    {
-        cell.image = [UIImage imageNamed:@"avator9.png"];
-    }
-        
+  
     return cell;
     
 }
@@ -267,5 +191,33 @@
 {
     return keys;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    ArtistDetailViewController *advController = [[[ArtistDetailViewController alloc]
+                                           init ] autorelease];
+  //  advController.artists = [self.arts objectAtIndex:indexPath.row];
+    NSLog(@"hello,kitty");
+    [[self navigationController] pushViewController:advController 
+                                           animated:YES];
+}
+
+
+/*
+#pragma mark -
+#pragma mark Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+	
+    TipDetailViewController *tipDetailViewController = [[TipDetailViewController alloc] initWithNibName:@"TipDetailViewController" bundle:nil];
+    tipDetailViewController.tip = [self.tips objectAtIndex:indexPath.row];
+    [self.navigationController pushViewController:tipDetailViewController animated:YES];
+    [tipDetailViewController release];
+    
+}
+ */
+
 
 @end
